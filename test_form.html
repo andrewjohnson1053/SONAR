@@ -6,22 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="min-h-full overflow-y-hidden">
+<body class="min-h-full">
     <div class="min-h-full">
         <nav class="bg-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
-                        <div class="flex-shrink-0">
-                            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                alt="Workflow">
-                        </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                <a href="./home.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     aria-current="page">Dashboard</a>
 
                                 <a href="#"
@@ -51,8 +48,8 @@
                         <form action="" method="post" class="flex flex-col w-full h-full">
                             <h1 class="text-xl font-normal border-b border-b-gray-300">Test from dataset</h1>
                             <input type="number" name="" id="" placeholder="Enter Index of Data"
-                            class="mt-2 py-1 px-2 text-md w-full border-gray-300 border outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
-                            <div class="flex flex-row w-full px-2 mt-2 justify-evenly">
+                            class="mt-3 py-1 px-2 text-md w-full border-gray-300 border outline-none focus:ring-2 focus:ring-blue-500 rounded-md">
+                            <div class="flex flex-row w-full px-2 mt-3 justify-evenly">
                                 <button type="submit" 
                                 class="w-24 px-4 py-2 text-white bg-green-500 rounded-md">
                                     Test
@@ -67,7 +64,7 @@
                     <div class="border border-gray-300 rounded-lg p-2">
                         <form action="" method="post" class="flex flex-col w-full h-full">
                             <h1 class="text-xl font-normal border-b border-b-gray-300">Generate Random Data</h1>
-                            <div class="flex flex-row w-full h-full px-2 mt-2 justify-evenly items-center">
+                            <div class="flex flex-row w-full h-full px-2 mt-3 justify-evenly items-center">
                                 <button type="submit" 
                                 class="w-24 px-4 py-2 text-white bg-green-500 rounded-md">
                                     Generate
@@ -85,12 +82,46 @@
                         </form>
                     </div>
                 </div>
-                <div class="flex flex-col flex-grow flex-shrink-0 space-y-2 p-2">
-                    g
+                <div class="grid grid-rows-2 gap-2 h-full space-y-2 p-2">
+                    <div class="w-full h-full">
+                        <canvas id="myChart" class=""></canvas>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <div class="text-md text-black border-b border-gray-200">
+                            Statistical Measures
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
+<script>
+  let labels = new Array();
+  for(let i = 1;i < 61;i++) labels.push(i);
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Sonar Chirp',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0.02,0.0371,0.0428,0.0207,0.0954,0.0986,0.1539,0.1601,0.3109,0.2111,0.1609,0.1582,0.2238,0.0645,0.066,0.2273,0.31,0.2999,0.5078,0.4797,0.5783,0.5071,0.4328,0.555,0.6711,0.6415,0.7104,0.808,0.6791,0.3857,0.1307,0.2604,0.5121,0.7547,0.8537,0.8507,0.6692,0.6097,0.4943,0.2744,0.051,0.2834,0.2825,0.4256,0.2641,0.1386,0.1051,0.1343,0.0383,0.0324,0.0232,0.0027,0.0065,0.0159,0.0072,0.0167,0.018,0.0084,0.009,0.0032],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
 </body>
 
 </html>
