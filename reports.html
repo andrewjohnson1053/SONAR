@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Reports</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -21,11 +21,11 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="./home.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                <a href="./home.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     aria-current="page">Dashboard</a>
 
                                 <a href="./reports.html"
-                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+                                    class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
 
                                 <a href="./about.html"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
@@ -66,50 +66,43 @@
             </div>
 
         </nav>
-
         <header class="bg-white shadow">
             <div class="max-w-7xl flex flex-row justify-between items-center mx-auto py-6 px-4">
-                <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
-                <a href="./test_form.html" class="flex items-center h-full px-4 py-1 text-xl font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500">Test</a>
+                <h1 class="text-3xl font-bold text-gray-900">Reports</h1>
             </div>
         </header>
         <main>
             <div class="max-w-7xl mx-auto py-6">
-                <flex class="flex flex-row space-x-2 p-2 w-full border-b border-gray-300">
-                    <h1 class="text-2xl font-light text-gray-900">News</h1>
-                </flex>
-                <div class="p-2 flex flex-col space-y-2">
-                    <div class="w-full shrink-0 border border-gray-300 flex flex-row rounded-lg">
-                        <img src="./img/news_items_1.png" alt="" srcset="" class="h-40 w-72 object-fill object-center left-0 rounded-lg" >
-                        <div class="p-2 flex flex-grow flex-col space-y-1">
-                            <div class="flex flex-col flex-grow space-y-2">
-                                <div class="text-xl font-medium">
-                                    Updated Marine Manager Portal Gives More Diverse and Dynamic Tools for Ocean Management
-                                </div>
-                                <div class="text-md font-normal text-gray-400">
-                                    Data and technology / By Tim White and Matt Gummery
-                                </div>
-                                <div class="text-sm font-normal">
-                                    Researchers can now compare levels of human activity over time to better fathom human behavior and impacts of management on marine ecosystems Marine protected areas (MPAs) are an important tool for safeguarding fragile ecosystems, endemic species and fish stocks throughout our global ocean. A growing number of countries around the world, with Chile as a …
-                                </div>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
                     </div>
-                    <div class="w-full shrink-0 border border-gray-300 flex flex-row rounded-lg">
-                        <img src="./img/news_items_3.jpg" alt="" srcset="" class="h-40 w-72 object-fill object-center left-0 rounded-lg" >
-                        <div class="p-2 flex flex-grow flex-col space-y-1">
-                            <div class="flex flex-col flex-grow space-y-2">
-                                <div class="text-xl font-medium">
-                                    Updated Marine Manager Portal Gives More Diverse and Dynamic Tools for Ocean Management
-                                </div>
-                                <div class="text-md font-normal text-gray-400">
-                                    Data and technology / By Tim White and Matt Gummery
-                                </div>
-                                <div class="text-sm font-normal">
-                                    Researchers can now compare levels of human activity over time to better fathom human behavior and impacts of management on marine ecosystems Marine protected areas (MPAs) are an important tool for safeguarding fragile ecosystems, endemic species and fish stocks throughout our global ocean. A growing number of countries around the world, with Chile as a …
-                                </div>
-                            </div>
-                        </div>
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
+                    </div>
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
+                    </div>
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
+                    </div>
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
+                    </div>
+                    <div class="border-gray-200 border rounded-sm p-2 flex flex-col">
+                        <div class="text-lg">Time</div>
+                        <div class="text-base text-green-600" id="result">Rock</div>
+                        <a href="#" id="open_link" class="underline">Show More</a>
                     </div>
                 </div>
             </div>
